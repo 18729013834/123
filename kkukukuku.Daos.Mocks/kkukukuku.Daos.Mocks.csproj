@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>1.0.00001</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{054B2132-570F-45B7-9763-41BDF9DB5505}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>kkukukuku.Daos.Mocks</RootNamespace>
+    <AssemblyName>kkukukuku.Daos.Mocks</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Common.Core">
+      <HintPath>..\CommonLib\Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.3.6.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <!--add customized code between this region-->
+    <!--add customized code between this region-->
+  </ItemGroup>
+  <ItemGroup>
+
+    <Compile Include="srctest\courseDaoMock.cs" />
+
+    <Compile Include="srctest\Student1DaoMock.cs" />
+
+    <Compile Include="Properties\AssemblyInfo.cs" />
+
+    <Compile Include="RegisterDaoMocks.cs" />
+
+    <!--add customized code between this region-->
+    <!--add customized code between this region-->
+  </ItemGroup>
+  <ItemGroup>
+
+    <ProjectReference Include="..\kkukukuku.Daos.Interfaces\kkukukuku.Daos.Interfaces.csproj">
+      <Project>{EAECC3BD-FC4C-4E20-88B6-83AD112F500E}</Project>
+      <Name>kkukukuku.Daos.Interfaces</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\kkukukuku.Entities\kkukukuku.Entities.csproj">
+      <Project>{154F338F-07C1-4078-AEAA-20EC0F009A46}</Project>
+      <Name>kkukukuku.Entities</Name>
+    </ProjectReference>
+
+    <ProjectReference Include="..\kkukukuku.TestData\kkukukuku.TestData.csproj">
+      <Project>{BE458419-91CC-4FFA-ABA9-FEC11E5E42BC}</Project>
+      <Name>kkukukuku.TestData</Name>
+    </ProjectReference>
+
+    <!--add customized code between this region-->
+    <!--add customized code between this region-->
+  </ItemGroup>
+ <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
